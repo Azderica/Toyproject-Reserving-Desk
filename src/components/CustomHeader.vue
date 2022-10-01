@@ -1,17 +1,31 @@
 <template>
-  <div>
-    <a-page-header
-      style="border: 1px solid rgb(235, 237, 240)"
-      title="자리 예약 시스템"
-      :sub-title="this.getSubtitle()"
-    />
-  </div>
+  <a-layout-header class="header">
+    <div class="logo">자리예약시스템</div>
+    <a-menu
+      theme="dark"
+      mode="horizontal"
+      style="{ lineHeight: '64px' }"
+    >
+      <a-menu-item key="1">
+        34F
+      </a-menu-item>
+      <a-menu-item key="2">
+        35F
+      </a-menu-item>
+      <a-menu-item key="3">
+        36F
+      </a-menu-item>
+      <a-menu-item key="4">
+        37F
+      </a-menu-item>
+    </a-menu>
+  </a-layout-header>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import {Component, Vue} from "vue-property-decorator";
 
-@Component({
+@Component<CustomHeader>({
   name: "CustomHeader",
 })
 export default class CustomHeader extends Vue {

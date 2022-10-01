@@ -1,11 +1,13 @@
 <template>
-  <div>Footer</div>
+  <a-layout-footer>
+    <div>Footer</div>
+  </a-layout-footer>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
-@Component({
+@Component<CustomFooter>({
   name: "CustomFooter",
 })
 export default class CustomFooter extends Vue {}

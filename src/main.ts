@@ -1,14 +1,28 @@
 import Vue from 'vue'
-import App from './App.vue'
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
+import App from './App.vue'
+import axios from 'axios'
+import * as moment from "moment/moment";
+import 'moment/locale/ko';
 
+class Main {
+  public run(): void {
+    Vue.use(Antd);
+    Vue.config.productionTip = true;
+    Vue.config.devtools = true;
+    // Vue.prototype.$eventBus = new Vue();
+    // Vue.prototype._ = _;
+    // Vue.prototype.moment = moment;
 
-Vue.config.productionTip = false;
-Vue.config.devtools = true;
+    const app = new Vue({
+      el: '#app',
+      render: h => h(App)
+    });
+  }
+}
 
-Vue.use(Antd)
+// @ts-ignore
+const main = new Main();
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+main.run();

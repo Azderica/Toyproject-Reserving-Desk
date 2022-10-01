@@ -1,22 +1,14 @@
 <template>
   <div id="app">
     <template>
-      <div id="components-layout-demo-basic">
+      <div id="components-layout-demo-top-side-2">
         <a-layout>
-          <a-layout-header>
-            <CustomHeader />
-          </a-layout-header>
+          <custom-header />
           <a-layout>
-            <a-layout-content>
-              <CustomContent />
-            </a-layout-content>
-            <a-layout-sider>
-              <CustomSide />
-            </a-layout-sider>
+            <custom-content />
+            <custom-side />
           </a-layout>
-          <a-layout-footer>
-            <CustomFooter />
-          </a-layout-footer>
+          <custom-footer />
         </a-layout>
       </div>
     </template>
@@ -30,13 +22,20 @@ import CustomSide from "./components/CustomSide.vue";
 import CustomContent from "./components/CustomContent.vue";
 import CustomHeader from "./components/CustomHeader.vue";
 
-@Component({
+@Component<App>({
   name: "App",
   components: { CustomContent, CustomSide, CustomHeader, CustomFooter },
 })
-class App extends Vue {}
-
-export default App;
+export default class App extends Vue {
+}
 </script>
 
-<style></style>
+<style>
+#components-layout-demo-top-side-2 .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 28px 16px 0;
+  float: left;
+}
+</style>

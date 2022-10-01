@@ -5,13 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "eslint --ext .js,.vue,.ts apps"
   },
   "dependencies": {
     "ant-design-vue": "^1.7.7",
     "axios": "^0.27.2",
     "babel-plugin-import": "^1.13.5",
     "core-js": "^3.6.5",
+    "promise-polyfill": "8.2.3",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3",
     "vue-property-decorator": "^9.1.2"

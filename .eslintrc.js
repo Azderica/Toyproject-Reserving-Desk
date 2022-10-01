@@ -20,6 +20,12 @@ module.exports = {
     'vue',
     '@typescript-eslint'
   ],
+  overrides: [{
+    files: ['*.ts', '*.tsx'],
+    rules: {
+      'no-unused-vars': 'off',
+    }
+  }],
   rules: {
     'no-debugger': 'warn',
     'prefer-rest-params': 'off',
