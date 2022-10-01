@@ -3,7 +3,7 @@
     <a-page-header
       style="border: 1px solid rgb(235, 237, 240)"
       title="자리 예약 시스템"
-      sub-title="this.getSubtitle()"
+      :sub-title="this.getSubtitle()"
     />
   </div>
 </template>
